@@ -1,3 +1,3 @@
-module github.com/kureduro/code-align
+module github.com/kureduro/haisu
 
 go 1.15

@@ -1,4 +1,4 @@
-## Code align
+## Haisu : a code aligner
 
 Basically, turn this 
 ```
@@ -32,14 +32,14 @@ It will produce an executable inside the directory.
 To make any use of it, you need to supply a set of alignment characters. These characters will be vertically aligned in the output. The program reads lines via `stdin`.
 
 ```
-$ printf "\t{Line one, two}\n\t{three, four}" | ./code-align "{,}"
+$ printf "\t{Line one, two}\n\t{three, four}" | ./haisu "{,}"
     {Line one,  two}
     {   three, four}
 ```
 
 I have come with this hacky workflow: open a text file in vim, copy needed lines there, then type
 ```
-:!cat file | ./code-align "{}," | xclip -selection clipboard
+:!cat file | ./haisu "{}," | xclip -selection clipboard
 ```
 
 This will copy the transformed lines into the clipboard.
